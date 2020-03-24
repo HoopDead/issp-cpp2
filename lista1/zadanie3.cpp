@@ -3,35 +3,36 @@
 
 using namespace std;
 
-int i = 0;
 
-double archimedes_pi_1(double n)
+void archimedes_pi_1(double n)
 {
-    while(i < 30)
+    double ti = n;
+    for(int i = 0; i <= 30; i++)
     {
-        double ans = (sqrt(pow(n, 2) + 1) - 1) / n;
-        i++;
-        cout << i << ": " << 6 * pow(2, i) * ans << endl;
-        return archimedes_pi_1(ans);
+        ti = (sqrt(pow(ti, 2) + 1) - 1) / ti;
+        double pi = 6 * pow(2, i) * ti;
+        cout << i << ": " << pi * 2 << endl;
     }
 }
 
-double archimedes_pi_2(double n)
+void archimedes_pi_2(double n)
 {
-    while(i < 30)
+    double ti = n;
+    for(int i = 0; i <= 30; i++)
     {
-        double ans = n/(sqrt(pow(n, 2) + 1) + 1);
-        i++;
-        cout << i << ": " << 6 * pow(2, i) * ans << endl;
-        return archimedes_pi_2(ans);
+        ti = ti / (sqrt(pow(ti, 2) + 1) + 1);
+        double pi = 6 * pow(2, i) * ti;
+        cout << i << ": " << pi * 2 << endl;
     }
 }
 
 int main()
 {
     const double t0 = 1/sqrt(3);
+    //Dla zadanej funkcji błąd wzrasta
     archimedes_pi_1(t0);
-    i = 0;
+    cout << "====================" << endl;
+    //Dla zadanej funkcji błąd maleje
     archimedes_pi_2(t0);
     return 0;
 }

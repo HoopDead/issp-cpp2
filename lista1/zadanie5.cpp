@@ -3,6 +3,7 @@
 using namespace std;
 
 int main() {
+    cout << (-5)%3 << endl;
     cout << (0xa - 012) << endl;
     cout << 13 % 3 << endl;
     cout << (1234^1234) << endl;
@@ -11,17 +12,17 @@ int main() {
     cout << (0xF & 0xA) << endl;
     cout << (3 > 2 > 1) << endl;
     cout << (12345 + ~12345) << endl;
-    cout << (1 + 1e40 - 1) << endl;
+    cout << "moj" <<(1 + 1e-40 - 1) << endl;
     cout << (1 + 1e-10f - 1) << endl;
-    cout << (3 == 3 == 3) << endl;
+    cout << "moj" <<(3 == 3 == 3) << endl;
     cout << (1/4) << endl;
     cout << (16 >> 1) << endl;
     cout << (0xff | 0xaa) << endl;
     cout << (1234567 & 1) << endl;
     cout << (1234567 | 1) << endl;
     cout << (1234567 ^ 1) << endl;
-    cout << (1 < 2 ? 1 : 2) << endl;
-    cout << (1, 2, 3, 4) << endl;
+    cout << "moj"<< (1 < 2 ? 1 : 2) << endl;
+    cout << "albo ten"<< (1, 2, 3, 4) << endl;
     cout << (3 < 2 & 1 < 2) << endl;
     cout << (1 < 2 && 2 < 1) << endl;
     cout << (1 < 2 || 2 > 1) << endl;
