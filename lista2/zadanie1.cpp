@@ -19,7 +19,7 @@ int findSmallestElement(vector <int> vector)
 
 int main()
 {
-    std::vector<int> v = {7, 5, 16, 8};
+    vector<int> v = {7, 5, 16, 8};
     cout << findSmallestElement(v) << endl;
     return 0;
 }

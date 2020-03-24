@@ -17,7 +17,7 @@ void changeToZeros(vector <double> vector)
 
 int main()
 {
-    std::vector<double> v = {7.5, 5.5, 16, 8};
+    vector<double> v = {7.5, 5.5, 16, 8};
     changeToZeros(v);
     return 0;
 }
