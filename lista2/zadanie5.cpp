@@ -2,6 +2,7 @@
 #include <cmath>
 #include <vector>
 #include <ctime>
+#include <chrono>
 
 using namespace std;
 
@@ -23,7 +24,18 @@ double fibo2(int n)
 
 int fibo3(int n)
 {
-    return fib_static[n];
+    const int size = 48;
+    static bool first = true;
+    static vector<int> fn(size);
+    if (first)
+    {
+        first =  false;
+        for(int i = 0; i < size; i++)
+        {
+            fn[i] = (1 / sqrt(5)) * (pow((2 / (sqrt(5) - 1)), i) - pow((-2 / (sqrt(5) + 1)), i));
+        }
+    }
+    return fn[n];
 }
 
 
@@ -42,5 +54,37 @@ int main()
         cout << fibo2(i) << "\n";
         cout << fibo3(i) << "\n";
     }
+    //PODPUNKT D
+	// auto t1 = chrono::high_resolution_clock::now();
+	// for (int i = 1; i <= 48; i++) {
+	// 	cout << fibo1(i) << " ";
+	// }
+	// cout << endl;
+	// auto t2 = chrono::high_resolution_clock::now();
+	// auto duration = chrono::duration_cast<chrono::microseconds>(t2 - t1).count();
+	// cout << "Czas fibo1(): " << duration;
+    //Czas fibo1(): 80458028 mircoseconds
+
+	// auto t1 = chrono::high_resolution_clock::now();
+	// for (int i = 1; i <= 48; i++) {
+	// 	cout << fibo2(i) << " ";
+	// }
+	// cout << endl;
+	// auto t2 = chrono::high_resolution_clock::now();
+	// auto duration = chrono::duration_cast<chrono::microseconds>(t2 - t1).count();
+	// cout << "Czas fibo2(): " << duration;
+    //Czas fibo2(): 71 microseconds
+
+
+
+    // auto t1 = chrono::high_resolution_clock::now();
+	// for (int i = 1; i < 48; i++) {
+	// 	cout << fibo3(i) << " ";
+	// }
+	// cout << endl;
+	// auto t2 = schrono::high_resolution_clock::now();
+	// auto duration = chrono::duration_cast<chrono::microseconds>(t2 - t1).count();
+	// cout << "Czas fibo3(): " << duration;
+    //Czas fibo3(): 47 microseconds
     return 0;
 }
