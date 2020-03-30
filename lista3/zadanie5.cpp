@@ -10,13 +10,19 @@ int main()
         kiedy wpiszemy haslo dluzsze od rozmiaru - w tym przypadku 8, sama zmienna haslo
         zostaje nadpisana i w takim przypadku, nawet wpisanie poprawnego hasla nie pozwoli nam
         zalogowac sie do systemu.
+
+        W przypadku, kiedy zmienna tmp jest niżej i wpiszemy więcej od rozmiaru,
+        wtedy wrzuca nas do systemu, ale otrzymuje błąd:
+        0witaj w systemie 
+        *** stack smashing detected ***: <unknown> terminated
+        Aborted (core dumped)
     */
-    char tmp[8];
     char haslo[8];
     strcpy(haslo,"1234");
     for(;;)
     {
         std::cout << "podaj haslo: ";
+        char tmp[8];
         std::cin >> tmp;
         cout << strcmp(tmp, haslo);
         if(strcmp(tmp,haslo) == 0)
