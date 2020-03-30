@@ -1,0 +1,5 @@
+Każdy kompilator, posiada swoją architekture i sposób zmiany kodu, na kod maszynowy
+przykładem jest chociażby Clang, który opiera się o kompilator Low Level Virtual Machine.
+Przykładem różnic między tym, jak działa kompilator, może być rozwiązanie zadania 4,
+gdzie jeden kompilator wpisywał komórki pamięci poprawnie - najpierw haslo, potem tmp
+A drugi wpisywal najpierw tmp, a potem haslo.
