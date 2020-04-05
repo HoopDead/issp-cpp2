@@ -5,24 +5,22 @@ Najwyższy priorytet – przynajmniej tak mi się wydaje – posiada operator ++
 Najniższy priorytet – operator =
 
 
-
 Jak działa i jaką wartość zwraca przyrostkowy operator ++ ?
-Odpowiada za przechodzenie na kolejne pola char oraz wrzucenia kolejnych znaków.
 
+Przy 'skad' odpowiada za przemieszczanie sie po kolejnych znakach ciągu tekstowego, natomiast przy 'bufor' za przeskakiwanie prez kolejne elementy tablicy
 
 
 
 Do czego służy jednoargumentowy operator *?
-Służy, jako wskaźnik na inny wskaźnik
+Konwertuje adres pamięci odczytany na wartość przepisaną do adresu
 
 
 
 Jaką wartość zwraca operator przypisania ?
-Zwraca kolejne wartości pól z argumentu
-
+Zwraca kolejno wartości pól z tekstu wczytanego jako argument
 
 
 Jak interpretowane jest wyrażenie warunkowe w pętli while, jeżeli zamaiast
 wyrażenia logicznego (o wartości true lub false) pojawia się w nim wyrażenie arytmetyczne ?
-Jeżeli poprawnie udało mi się zrozumieć samą treść zadania, to prawdopodobnie pętla będzie się wykonywała do momentu, kiedy nie zabraknie jej pamięci.
 
+Jeżeli użyjemy liczby 0, to pętla otrzyma false i się nie będzie wykonywać, jeżeli otrzyma liczbę z przedziału (-nieskonczonosc; 0) u (0; nieskonczonosc) to bedzie sie wykonywac
