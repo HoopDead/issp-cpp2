@@ -3,7 +3,7 @@
 
 using namespace std;
 
-double operator*(vector<double> const v, vector<double> const w)
+double operator*(const vector<double>& v, const vector<double>& w)
 {
     if (v.size() != w.size())
     {

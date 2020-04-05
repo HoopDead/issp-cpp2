@@ -16,9 +16,9 @@ int fibo1(int n)
     return fibo1(n-1) + fibo1(n-2);
 }
 
-double fibo2(int n)
+int fibo2(int n)
 {
-    double fn = ((1/sqrt(5)) * ( pow((2/( sqrt(5)-1 )),n) - pow((-2/( sqrt(5)+1 )),n)));
+    int fn = round(((1/sqrt(5)) * ( pow((2/( sqrt(5)-1 )),n) - pow((-2/( sqrt(5)+1 )),n))));
     return fn;
 }
 
@@ -32,7 +32,7 @@ int fibo3(int n)
         first =  false;
         for(int i = 0; i < size; i++)
         {
-            fn[i] = (1 / sqrt(5)) * (pow((2 / (sqrt(5) - 1)), i) - pow((-2 / (sqrt(5) + 1)), i));
+            fn[i] = round((1 / sqrt(5)) * (pow((2 / (sqrt(5) - 1)), i) - pow((-2 / (sqrt(5) + 1)), i)));
         }
     }
     return fn[n];
