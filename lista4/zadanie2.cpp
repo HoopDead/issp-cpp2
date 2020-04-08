@@ -5,22 +5,15 @@ using namespace std;
 
 int main()
 {
-    const Complex ii(0, 1);
-    Complex a[3];
-    a[0] = Complex(1, 1);
-    a[1] = a[0] + ii;
-    a[2] = a[1];
-    a[2] += ii;
-
-    Complex d = a[1] + a[2];
-    d += a[0];
-
-    cout << a[0];
-    for (int i = 1; i < 3; i++)
-    {
-        cout << " + " << a[i];
-    }
-    cout << " = " << d << "\n";
-    cout << "jednostka urojona = " << ii.real() << " + " << ii.imag() << "i\n";
+    Complex z1(1, 1);
+    Complex z2(2, 2);
+    Complex z3;
+    cout << z1 + z2 << "\n";
+    cout << z1 - z2 << "\n";
+    cout << z1 * z2 << "\n";
+    cout << z1 / z2 << "\n";
+    cout << z1;
+    cout << "\n";
+    cin >> z3;
   return 0;
 }

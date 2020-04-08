@@ -10,40 +10,20 @@ public:
     float real() const { return _real;}
     float imag() const { return _imag;}
 
-    Complex operator+=(Complex const& a)
-    {
-        _real += a._real;
-        _imag += a._imag;
-        return *this;
-    }
-
-    Complex operator-=(Complex const& a)
-    {
-        _real -= a._real;
-        _imag -= a._imag;
-        return *this;
-    }
-
-    Complex operator*=(Complex const& a)
-    {
-        float temp = _real;
-        _real = a._real*_real-a._imag*_imag;
-        _imag = a._real*_imag+temp*a._imag;
-        return *this;
-    }
-
-    Complex operator/=(Complex const& a)
-    {
-        float temp = _real;
-        _real = a._real/_real-a._imag/_imag;
-        _imag = a._real/_imag+temp/a._imag;
-        return *this;
-    }
 
     friend ostream& operator<<(ostream &out, Complex const& a)
     {
         out << "(" << a._real << "," << a._imag << ")";
         return out;
+    }
+
+    friend istream& operator>>(istream &in, Complex &a)
+    {
+        cout << "Czesc rzeczywista: ";
+        in >> a._real;
+        cout << "\n Czesc zespolona: ";
+        in >> a._imag;
+        return in;
     }
 
 };
