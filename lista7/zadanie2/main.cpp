@@ -38,7 +38,6 @@ void save_to_pgm(const char filename[], int width, int height, int depth, Kolor 
 
 int main() {
     auto result = load_file("tree_1.ppm");
-    cout << result.t;
     save_to_pgm("wynik.pgm", result.w, result.h, result.d, result.t);
     return 0;
 }
